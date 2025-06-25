@@ -79,7 +79,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh; /* Volle Viewport-Höhe */
-    background: linear-gradient(45deg, rgba(0, 38, 255, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') center/cover; /* Schwarz statt Dunkelblau */
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 38, 2550, 0.8)), url('images/hero-bg.jpg') center/cover; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text */
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@ nav ul li a:hover {
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 100px;
     display: inline-block;
     border: none;
     cursor: pointer;
