@@ -14,7 +14,7 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
         const targetId = this.getAttribute('href');
         const target = document.querySelector(targetId);
         if (target) {
-            const headerOffset = 60; // Höhe des fixed Headers
+            const headerOffset = 80; // Erhöht für Sichtbarkeit
             const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerOffset;
 
@@ -59,3 +59,23 @@ form.addEventListener('submit', async (e) => {
         alert('Fehler beim Senden der Nachricht: ' + error.message);
     }
 });
+
+// Text Slogan-Wechsler for Hero Section
+const slogans = [
+    "Verbündeter für Ihre Werte",
+    "Sicherheit mit Vertrauen",
+    "Ihr Partner in München"
+];
+let currentSloganIndex = 0;
+const sloganElement = document.querySelector('.slogan');
+
+function changeSlogan() {
+    sloganElement.classList.add('fade');
+    setTimeout(() => {
+        currentSloganIndex = (currentSloganIndex + 1) % slogans.length;
+        sloganElement.textContent = slogans[currentSloganIndex];
+        sloganElement.classList.remove('fade');
+    }, 500); // Synchron mit CSS-Transition
+}
+
+setInterval(changeSlogan, 4000); // Wechsel alle 4 Sekunden

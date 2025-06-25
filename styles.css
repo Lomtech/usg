@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background: #000000; /* Dunkelblau für Header */
+    background: #000000; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text im Header */
     padding: 1rem 0;
     position: fixed;
@@ -36,8 +36,15 @@ header .container {
     align-items: center;
 }
 
-.logo-img {
-    height: 40px;
+.logo-icon {
+    font-size: 2.5rem; /* Größe des Logo-Icons */
+    color: #FFFFFF; /* Weiß im Header */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-icon:hover {
+    color: #797979; /* Dunkles Grau für Hover statt Hellgrau */
 }
 
 nav ul {
@@ -53,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #CCCCCC; /* Hellgrau für Hover-Effekt */
+    color: #878787; /* Dunkles Grau für Hover */
 }
 
 .hamburger {
@@ -71,26 +78,41 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 85, 254, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') center/cover; /* Dunkelblau mit Bild */
+    height: 100vh; /* Volle Viewport-Höhe */
+    background: linear-gradient(45deg, rgba(0, 38, 255, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') center/cover; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 6rem 0;
-    margin-top: 60px; /* Offset für fixed Header */
+    animation: gradientShift 10s ease infinite; /* Subtile Hintergrundanimation */
 }
 
-/* Anker-Offset für Sektionen */
-section[id]::before {
-    content: '';
-    display: block;
-    height: 60px; /* Höhe des Headers */
-    margin-top: -60px; /* Negativer Margin, um Platz zu schaffen */
-    visibility: hidden;
-    pointer-events: none;
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Größere Schrift für Impact */
     margin-bottom: 1rem;
+}
+
+.slogan {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Fade-Animation für Text-Wechsler */
+}
+
+.slogan.fade {
+    opacity: 0;
 }
 
 .hero p {
@@ -99,7 +121,7 @@ section[id]::before {
 }
 
 .btn {
-    background: #000000; /* Dunkelblau für Buttons */
+    background: #000000; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -111,12 +133,12 @@ section[id]::before {
 }
 
 .btn:hover {
-    background: #c6c9d1; /* Dunkleres Blau für Hover */
+    background: #5a75ba; /* Dunkles Grau für Hover */
 }
 
 /* Services Section */
 .services {
-    padding: 4rem 0;
+    padding: 4rem;
     background: #FFFFFF; /* Weißer Hintergrund */
 }
 
@@ -141,12 +163,17 @@ section[id]::before {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.service-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
+.service-icon {
+    display: inline-block;
+    font-size: 3rem; /* Große Icons */
+    color: #000000; /* Schwarz statt Dunkelblau */
     margin-bottom: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-icon:hover {
+    color: #333333; /* Dunkleres Grau für Hover */
 }
 
 .service-card h3 {
@@ -228,7 +255,7 @@ section[id]::before {
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
-    background: #003087; /* Dunkelblau für Erfolgsmeldung */
+    background: #000000; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text */
     border-radius: 5px;
 }
@@ -245,7 +272,7 @@ section[id]::before {
 
 /* Footer */
 footer {
-    background: #000000; /* Dunkelblau für Footer */
+    background: #000000; /* Schwarz statt Dunkelblau */
     color: #FFFFFF; /* Weißer Text */
     text-align: center;
     padding: 2rem 0;
@@ -265,7 +292,17 @@ footer {
 }
 
 .footer-links li a:hover {
-    color: #CCCCCC; /* Hellgrau für Hover */
+    color: #333333; /* Dunkles Grau für Hover */
+}
+
+/* Anker-Offset für Sektionen */
+section[id]::before {
+    content: '';
+    display: block;
+    height: 80px; /* Für Sichtbarkeit */
+    margin-top: -80px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* Responsive Design */
@@ -277,7 +314,7 @@ footer {
         top: 60px;
         left: 0;
         width: 100%;
-        background: #003087; /* Dunkelblau für mobiles Menü */
+        background: #000000; /* Schwarz für mobiles Menü */
         padding: 1rem 0;
     }
 
@@ -296,6 +333,10 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+
+    .logo-icon {
+        font-size: 2rem; /* Kleineres Icon auf Mobilgeräten */
+    }
 }
 
 @media (max-width: 480px) {
@@ -311,5 +352,13 @@ footer {
     .about h2,
     .contact h2 {
         font-size: 1.5rem;
+    }
+
+    .service-icon {
+        font-size: 2.5rem; /* Kleinere Icons auf kleinen Bildschirmen */
+    }
+
+    .logo-icon {
+        font-size: 1.8rem;
     }
 }
