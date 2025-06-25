@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background: #003087; /* Dunkelblau für Header */
+    background: #000000; /* Dunkelblau für Header */
     color: #FFFFFF; /* Weißer Text im Header */
     padding: 1rem 0;
     position: fixed;
@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 48, 135, 0.8), rgba(0, 48, 135, 0.8)), url('images/hero-bg.jpg') center/cover; /* Dunkelblau mit Bild */
+    background: linear-gradient(rgba(32, 97, 227, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') center/cover; /* Dunkelblau mit Bild */
     color: #FFFFFF; /* Weißer Text */
     text-align: center;
     padding: 6rem 0;
@@ -99,7 +99,7 @@ section[id]::before {
 }
 
 .btn {
-    background: #003087; /* Dunkelblau für Buttons */
+    background: #000000; /* Dunkelblau für Buttons */
     color: #FFFFFF; /* Weißer Text */
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -111,7 +111,7 @@ section[id]::before {
 }
 
 .btn:hover {
-    background: #002066; /* Dunkleres Blau für Hover */
+    background: #c6c9d1; /* Dunkleres Blau für Hover */
 }
 
 /* Services Section */
@@ -245,7 +245,7 @@ section[id]::before {
 
 /* Footer */
 footer {
-    background: #003087; /* Dunkelblau für Footer */
+    background: #000000; /* Dunkelblau für Footer */
     color: #FFFFFF; /* Weißer Text */
     text-align: center;
     padding: 2rem 0;
