@@ -44,7 +44,7 @@ header .container {
 }
 
 .logo-icon:hover {
-    color: #979ab0; /* Dunkles Grau für Hover statt Hellgrau */
+    color: #b1b1b1; /* Dunkles Grau für Hover statt Hellgrau */
 }
 
 nav ul {
@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #979ab0; /* Dunkles Grau für Hover */
+    color: #b1b1b1; /* Dunkles Grau für Hover */
 }
 
 .hamburger {
@@ -133,7 +133,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #979ab0; /* Dunkles Grau für Hover */
+    background: #b1b1b1; /* Dunkles Grau für Hover */
 }
 
 /* Services Section */
@@ -173,7 +173,7 @@ nav ul li a:hover {
 }
 
 .service-icon:hover {
-    color: #979ab0; /* Dunkleres Grau für Hover */
+    color: #b1b1b1; /* Dunkleres Grau für Hover */
 }
 
 .service-card h3 {
@@ -292,7 +292,7 @@ footer {
 }
 
 .footer-links li a:hover {
-    color: #979ab0; /* Dunkles Grau für Hover */
+    color: #b1b1b1; /* Dunkles Grau für Hover */
 }
 
 /* Anker-Offset für Sektionen */
