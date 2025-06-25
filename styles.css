@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #878787; /* Dunkles Grau für Hover */
+    color: #979ab0; /* Dunkles Grau für Hover */
 }
 
 .hamburger {
@@ -173,7 +173,7 @@ nav ul li a:hover {
 }
 
 .service-icon:hover {
-    color: #333333; /* Dunkleres Grau für Hover */
+    color: #979ab0; /* Dunkleres Grau für Hover */
 }
 
 .service-card h3 {
@@ -292,7 +292,7 @@ footer {
 }
 
 .footer-links li a:hover {
-    color: #333333; /* Dunkles Grau für Hover */
+    color: #979ab0; /* Dunkles Grau für Hover */
 }
 
 /* Anker-Offset für Sektionen */
