@@ -62,9 +62,9 @@ form.addEventListener('submit', async (e) => {
 
 // Text Slogan-Wechsler for Hero Section
 const slogans = [
-    "Verbündeter für Ihre Werte",
-    "Sicherheit mit Vertrauen",
-    "Ihr Partner in München"
+    "https://united-secguardians.de/",
+    "https://united-secguardians.de/",
+    "https://united-secguardians.de/"
 ];
 let currentSloganIndex = 0;
 const sloganElement = document.querySelector('.slogan');
