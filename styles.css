@@ -1,0 +1,296 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000; /* Schwarz für Text */
+    line-height: 1.6;
+    background: #FFFFFF; /* Weißer Hintergrund */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #003087; /* Dunkelblau für Header */
+    color: #FFFFFF; /* Weißer Text im Header */
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* Weißer Text für Nav-Links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #CCCCCC; /* Hellgrau für Hover-Effekt */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF; /* Weiße Hamburger-Linien */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 48, 135, 0.8), rgba(0, 48, 135, 0.8)), url('images/hero-bg.jpg') center/cover; /* Dunkelblau mit Bild */
+    color: #FFFFFF; /* Weißer Text */
+    text-align: center;
+    padding: 6rem 0;
+    margin-top: 60px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: #003087; /* Dunkelblau für Buttons */
+    color: #FFFFFF; /* Weißer Text */
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #002066; /* Dunkleres Blau für Hover */
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+    background: #FFFFFF; /* Weißer Hintergrund */
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #000000; /* Schwarze Überschrift */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #F5F5F5; /* Sehr hellgrau für Karten */
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000000; /* Schwarze Überschrift */
+}
+
+.service-card p {
+    color: #000000; /* Schwarzer Text */
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background: #FFFFFF; /* Weißer Hintergrund */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000000; /* Schwarze Überschrift */
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #000000; /* Schwarzer Text */
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background: #F5F5F5; /* Sehr hellgrau für Abwechslung */
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #000000; /* Schwarze Überschrift */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #000000; /* Schwarze Labels */
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000000; /* Schwarze Rahmen */
+    border-radius: 5px;
+    background: #FFFFFF; /* Weißer Hintergrund */
+    color: #333333; /* Dunkler Text für Eingaben */
+}
+
+.contact form textarea {
+    height: 150px;
+}
+
+.contact form button {
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: #000000; /* Schwarzer Text */
+}
+
+/* Footer */
+footer {
+    background: #003087; /* Dunkelblau für Footer */
+    color: #FFFFFF; /* Weißer Text */
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-links li a {
+    color: #FFFFFF; /* Weiße Links */
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: #CCCCCC; /* Hellgrau für Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #003087; /* Dunkelblau für mobiles Menü */
+        padding: 1rem 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+}

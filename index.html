@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="United SecGuardians – Ihr Sicherheitsdienstleister in München mit über 30 Jahren Erfahrung. Objektschutz, Veranstaltungssicherheit, Brandschutz und Personenschutz.">
+    <meta name="keywords" content="Sicherheitsdienst, Sicherheitsdienst München, USG, Objektschutz, Veranstaltungssicherheit, Brandschutz, Personenschutz">
+    <title>USG – United SecGuardians Sicherheitsdienst München</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="United SecGuardians Logo" class="logo-img">
+            </div>
+            <nav>
+                <div class="hamburger" aria-label="Menü öffnen/schließen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="smooth-scroll">Home</a></li>
+                    <li><a href="#services" class="smooth-scroll">Dienstleistungen</a></li>
+                    <li><a href="#about" class="smooth-scroll">Über Uns</a></li>
+                    <li><a href="#contact" class="smooth-scroll">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Verbündeter für Ihre Werte</h2>
+            <p>Ihr Sicherheitsdienstleister in München mit über 30 Jahren Erfahrung.</p>
+            <a href="#contact" class="btn smooth-scroll">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Unsere Dienstleistungen</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="images/service-objektschutz.jpg" alt="Objektschutz">
+                    <h3>Objektschutz</h3>
+                    <p>Schutz für Ihre Immobilien und Anlagen, rund um die Uhr.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/service-veranstaltung.jpg" alt="Veranstaltungssicherheit">
+                    <h3>Veranstaltungssicherheit</h3>
+                    <p>Sicherer Ablauf für Events jeder Größe in München.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/service-brandschutz.jpg" alt="Brandschutz">
+                    <h3>Brandschutz</h3>
+                    <p>Zertifizierte Brandwachen für maximale Sicherheit.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/service-personenschutz.jpg" alt="Personenschutz">
+                    <h3>Personenschutz</h3>
+                    <p>Diskreter Schutz durch professionelles Personal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Über United SecGuardians</h2>
+            <p>Mit über 30 Jahren Erfahrung ist United SecGuardians Ihr vertrauenswürdiger Partner für Sicherheitsdienstleistungen in München. Als zertifiziertes Familienunternehmen (ISO 9001:2015) bieten wir maßgeschneiderte Lösungen für Unternehmen und Privatpersonen.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontaktieren Sie uns</h2>
+            <form id="contact-form" action="https://formspree.io/f/mvgrvklk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Absenden</button>
+            </form>
+            <div class="contact-info">
+                <p><strong>Telefon:</strong> +49 8131 338 0331</p>
+                <p><strong>E-Mail:</strong> info@united-secguardians.de</p>
+                <p><strong>Standort:</strong> München, Deutschland</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 United SecGuardians. Alle Rechte vorbehalten.</p>
+            <ul class="footer-links">
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
