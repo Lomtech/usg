@@ -7,12 +7,55 @@ hamburger.addEventListener('click', () => {
     hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
 });
 
-// Smooth Scroll
+// Smooth Scroll with Header Offset
 document.querySelectorAll('.smooth-scroll').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-        navLinks.classList.remove('active'); // Close mobile menu
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            const headerOffset = 60; // Höhe des fixed Headers
+            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+            navLinks.classList.remove('active'); // Close mobile menu
+        }
     });
+});
+
+// Form Submission with AJAX
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    try {
+        const response = await fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            form.reset(); // Reset form fields
+            successMessage.style.display = 'block'; // Show success message
+            setTimeout(() => {
+                successMessage.style.display = 'none'; // Hide after 5 seconds
+            }, 5000);
+        } else {
+            alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.');
+        }
+    } catch (error) {
+        alert('Fehler beim Senden der Nachricht: ' + error.message);
+    }
 });

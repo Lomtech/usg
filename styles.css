@@ -75,7 +75,17 @@ nav ul li a:hover {
     color: #FFFFFF; /* Weißer Text */
     text-align: center;
     padding: 6rem 0;
-    margin-top: 60px;
+    margin-top: 60px; /* Offset für fixed Header */
+}
+
+/* Anker-Offset für Sektionen */
+section[id]::before {
+    content: '';
+    display: block;
+    height: 60px; /* Höhe des Headers */
+    margin-top: -60px; /* Negativer Margin, um Platz zu schaffen */
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .hero h2 {
@@ -212,6 +222,15 @@ nav ul li a:hover {
 .contact form button {
     display: block;
     margin: 0 auto;
+}
+
+.success-message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #003087; /* Dunkelblau für Erfolgsmeldung */
+    color: #FFFFFF; /* Weißer Text */
+    border-radius: 5px;
 }
 
 .contact-info {
